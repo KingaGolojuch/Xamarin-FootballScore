@@ -13,7 +13,7 @@ namespace PROJEKT
         {
             InitializeComponent();
 
-            //MainPage = new PROJEKT.MainPage();
+            MainPage = new PROJEKT.MainPage();
         }
     }
 }
