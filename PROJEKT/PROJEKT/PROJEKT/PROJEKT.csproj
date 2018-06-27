@@ -46,6 +46,9 @@
     <Compile Include="Views\CompetitionsPage.xaml.cs">
       <DependentUpon>CompetitionsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Controls\CompetitionsView.xaml.cs">
+      <DependentUpon>CompetitionsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\InitializationPage.xaml.cs">
       <DependentUpon>InitializationPage.xaml</DependentUpon>
     </Compile>
@@ -60,7 +63,6 @@
     <Folder Include="Models\API\" />
     <Folder Include="Models\Extensions\" />
     <Folder Include="Models\Interfaces\" />
-    <Folder Include="Views\Controls\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\InitializationPage.xaml">
@@ -94,6 +96,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CompetitionsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\CompetitionsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

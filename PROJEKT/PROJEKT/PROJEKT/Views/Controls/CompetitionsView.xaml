@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="PROJEKT.Views.Controls.CompetitionsView">
+
+  <Grid
+    Padding="20,10"
+    BackgroundColor="#efefef">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid
+      Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="1*"/>
+      </Grid.ColumnDefinitions>
+      <Label
+        Grid.Column="0"
+        HorizontalTextAlignment="Start"
+        FontSize="18"
+        TextColor="#073a0a"
+        FontAttributes="Bold"
+        Text="{Binding Caption}">
+      </Label>
+      <StackLayout
+        HorizontalOptions="End"
+        Grid.Column="1"
+        Orientation="Horizontal">
+        <Label
+          HorizontalTextAlignment="End"
+          FontSize="15"
+          TextColor="#073a0a"
+          Text="{Binding League}">
+        </Label>
+        <Label
+          HorizontalTextAlignment="End"
+          FontSize="15"
+          TextColor="#073a0a"
+          Text=" - ">
+        </Label>
+        <Label
+          HorizontalTextAlignment="End"
+          FontSize="15"
+          TextColor="#073a0a"
+          Text="{Binding Year}">
+        </Label>
+      </StackLayout>
+    </Grid>
+
+    <!-- #7c7c7c -->
+    <Grid
+      Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="1*"/>
+      </Grid.ColumnDefinitions>
+      <StackLayout
+        Grid.Column="0"
+        Orientation="Horizontal">
+        <Label
+          HorizontalTextAlignment="Start"
+          FontSize="15"
+          TextColor="#7c7c7c"
+          Text="Zespoły: ">
+        </Label>
+        <Label
+          HorizontalTextAlignment="Start"
+          FontSize="15"
+          TextColor="#7c7c7c"
+          Text="{Binding NumerOfTeams}">
+        </Label>
+      </StackLayout>
+      <StackLayout
+        Grid.Column="1"
+        HorizontalOptions="End"
+        Orientation="Horizontal">
+        <Label
+          HorizontalTextAlignment="Start"
+          FontSize="15"
+          TextColor="#7c7c7c"
+          Text="Mecze: ">
+        </Label>
+        <Label
+          HorizontalTextAlignment="Start"
+          FontSize="15"
+          TextColor="#7c7c7c"
+          Text="{Binding CurrentMatchday}">
+        </Label>
+        <Label
+          HorizontalTextAlignment="Start"
+          FontSize="15"
+          TextColor="#7c7c7c"
+          Text=" / ">
+        </Label>
+        <Label
+          HorizontalTextAlignment="Start"
+          FontSize="15"
+          TextColor="#7c7c7c"
+          Text="{Binding NumberOfMatchdays}">
+        </Label>
+      </StackLayout>
+    </Grid>
+
+  </Grid>
+</ViewCell>
