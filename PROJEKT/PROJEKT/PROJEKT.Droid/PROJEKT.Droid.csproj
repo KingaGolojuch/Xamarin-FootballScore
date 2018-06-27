@@ -97,6 +97,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyService\StreamService.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\CarouselRenderer.cs" />
     <Compile Include="Renderers\ListRenderer.cs" />
@@ -128,9 +129,7 @@
       <Name>PROJEKT</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DependencyService\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidAsset Include="Assets\Load.jpg" />
   </ItemGroup>
