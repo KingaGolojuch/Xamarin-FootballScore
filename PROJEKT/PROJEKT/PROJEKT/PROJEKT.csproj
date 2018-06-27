@@ -49,6 +49,7 @@
     <Compile Include="Views\Controls\CompetitionsView.xaml.cs">
       <DependentUpon>CompetitionsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Controls\MyCarouselView.cs" />
     <Compile Include="Views\InitializationPage.xaml.cs">
       <DependentUpon>InitializationPage.xaml</DependentUpon>
     </Compile>
