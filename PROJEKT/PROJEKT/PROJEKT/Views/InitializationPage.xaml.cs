@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using PROJEKT.ViewModels;
+using System;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace PROJEKT.Views
@@ -32,5 +29,6 @@ namespace PROJEKT.Views
             img.HeightRequest = (Application.Current as App).Height;
             img.WidthRequest = (Application.Current as App).Width;
         }
+        
     }
 }
