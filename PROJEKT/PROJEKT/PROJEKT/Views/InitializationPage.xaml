@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  NavigationPage.HasNavigationBar="false"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:e="clr-namespace:PROJEKT.Models.Extensions;assembly=PROJEKT"
+  x:Class="PROJEKT.Views.InitializationPage">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+
+    <Image
+      Grid.Row="0"
+      Grid.RowSpan="3"
+      Grid.ColumnSpan="3"
+      Source="{e:AssetsImage Load.jpg}"
+      Aspect="AspectFill"
+      SizeChanged="Image_SizeChanged" />
+
+    <Grid
+      Opacity="0.5"
+      BackgroundColor="Black"
+      Padding="20"
+      Grid.Column="1"
+      Grid.Row="1">
+      <Label
+        Text="Ładowanie..."
+        TextColor="White"
+        FontSize="20"
+        Style="{StaticResource TxtContentCenter}" />
+    </Grid>
+  </Grid>
+</ContentPage>
