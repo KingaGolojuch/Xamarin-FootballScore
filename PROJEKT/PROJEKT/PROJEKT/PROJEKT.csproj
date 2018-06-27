@@ -38,7 +38,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\API\CompetitionDTO.cs" />
+    <Compile Include="Models\API\FixtureDTO.cs" />
+    <Compile Include="Models\API\FixtureResultDTO.cs" />
+    <Compile Include="Models\API\FixturesDTO.cs" />
+    <Compile Include="Models\API\LeagueDTO.cs" />
+    <Compile Include="Models\API\LeaguesDTO.cs" />
+    <Compile Include="Models\API\TeamDTO.cs" />
+    <Compile Include="Models\API\TeamsDTO.cs" />
+    <Compile Include="Models\Extensions\AssetsImageExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CompetitionsViewModel.cs" />
+    <Compile Include="ViewModels\CompetitionViewModel.cs" />
     <Compile Include="ViewModels\InitializationViewModel.cs" />
     <Compile Include="Views\CompetitionPage.xaml.cs">
       <DependentUpon>CompetitionPage.xaml</DependentUpon>
@@ -61,8 +72,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\API\" />
-    <Folder Include="Models\Extensions\" />
     <Folder Include="Models\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
