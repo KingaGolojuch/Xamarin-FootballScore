@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  NavigationPage.HasBackButton="false"
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="PROJEKT.Views.CompetitionsPage"
+  BackgroundColor="#efefef">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <ListView
+      x:Name="listView"
+      Grid.Row="0"
+      HasUnevenRows="True" />
+
+    <Grid
+      BackgroundColor="#073a0a"
+      Grid.Row="1">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="5" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="5" />
+      </Grid.RowDefinitions>
+      <Label
+        Grid.Row="1"
+        HorizontalTextAlignment="Center"
+        Text="Wersja 1.0"
+        TextColor="White"
+        FontSize="15" />
+    </Grid>
+
+    <Label
+      x:Name="LblNoInternet"
+      Grid.Row="0"
+      Margin="20"
+      HorizontalTextAlignment="Center"
+      VerticalTextAlignment="Center"
+      FontSize="20"
+      Text="Sprawdź połączenie internetowe i załaduj aplikacje od nowa."
+      TextColor="#073a0a" />
+
+    <Grid
+      x:Name="grid"
+      Grid.RowSpan="2"
+      Opacity="0.5"
+      BackgroundColor="Black">
+      <Label
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        FontSize="18"
+        Text="Ładowanie..."
+        TextColor="White" />
+    </Grid>
+  </Grid>
+</ContentPage>

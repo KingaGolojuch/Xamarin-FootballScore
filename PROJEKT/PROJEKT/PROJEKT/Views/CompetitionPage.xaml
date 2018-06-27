@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:Views="clr-namespace:PROJEKT.Views.Controls;assembly=PROJEKT"
+  xmlns:e="clr-namespace:PROJEKT.Models.Extensions;assembly=PROJEKT"
+  x:Class="PROJEKT.Views.CompetitionPage">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+
+
+    <Views:MyCarouselView
+      Grid.Row="0"
+      Grid.ColumnSpan="4"
+      x:Name="crlLayout"
+      HorizontalOptions="FillAndExpand"
+      VerticalOptions="FillAndExpand" />
+
+    <Grid
+      x:Name="footer"
+      Grid.Row="1"
+      Grid.ColumnSpan="4"
+      BackgroundColor="#073a0a" />
+
+    <Grid
+      x:Name="homeGrid"
+      Grid.Row="1"
+      Grid.Column="0"
+      BackgroundColor="#efefef">
+      <Grid.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding CmdHome}" />
+      </Grid.GestureRecognizers>
+      <Image
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Aspect="AspectFit"
+        Source="{e:AssetsImage IconHome.png}"
+        SizeChanged="Image_SizeChanged">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding CmdHome}" />
+        </Image.GestureRecognizers>
+      </Image>
+    </Grid>
+
+    <Grid
+      x:Name="fixturesGrid"
+      Grid.Row="1"
+      Grid.Column="1"
+      BackgroundColor="#073a0a">
+      <Grid.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding CmdFixtures}" />
+      </Grid.GestureRecognizers>
+      <Image
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Aspect="AspectFit"
+        Source="{e:AssetsImage IconFixtures.png}"
+        SizeChanged="Image_SizeChanged">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding CmdFixtures}" />
+        </Image.GestureRecognizers>
+      </Image>
+    </Grid>
+
+    <Grid
+      x:Name="leagueGrid"
+      Grid.Row="1"
+      Grid.Column="2"
+      BackgroundColor="#073a0a">
+      <Grid.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding CmdLeague}" />
+      </Grid.GestureRecognizers>
+      <Image
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Aspect="AspectFit"
+        Source="{e:AssetsImage IconLeague.png}"
+        SizeChanged="Image_SizeChanged">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding CmdLeague}" />
+        </Image.GestureRecognizers>
+      </Image>
+    </Grid>
+
+    <Grid
+      x:Name="teamGrid"
+      Grid.Row="1"
+      Grid.Column="3"
+      BackgroundColor="#073a0a">
+      <Grid.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding CmdTeams}" />
+      </Grid.GestureRecognizers>
+      <Image
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Aspect="AspectFit"
+        Source="{e:AssetsImage IconTeam.png}"
+        SizeChanged="Image_SizeChanged">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding CmdTeams}" />
+        </Image.GestureRecognizers>
+      </Image>
+    </Grid>
+  </Grid>
+</ContentPage>
