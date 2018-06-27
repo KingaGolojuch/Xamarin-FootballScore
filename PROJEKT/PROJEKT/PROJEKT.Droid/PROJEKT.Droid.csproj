@@ -98,6 +98,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\CarouselRenderer.cs" />
+    <Compile Include="Renderers\ListRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -128,10 +130,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DependencyService\" />
-    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Load.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\IconFixtures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\IconHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\IconLeague.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\IconTeam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.2.0.45\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
