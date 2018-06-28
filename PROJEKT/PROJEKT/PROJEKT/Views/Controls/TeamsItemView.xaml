@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="PROJEKT.Views.Controls.TeamsItemView">
+
+  <Grid
+    ColumnSpacing="1">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="5*" />
+    </Grid.ColumnDefinitions>
+
+    <Grid
+      Grid.Column="0">
+      <Label
+        Margin="10,0,0,0"
+        Text="{Binding Lp}"
+        HorizontalTextAlignment="Start"
+        VerticalTextAlignment="Center"
+        FontSize="18"
+        TextColor="#7c7c7c"
+        FontAttributes="None" />
+    </Grid>
+    
+    <Grid
+      Grid.Column="1">
+      <Label
+        Margin="10,5"
+        HorizontalTextAlignment="Start"
+        VerticalTextAlignment="Center"
+        FontSize="18"
+        TextColor="#073a0a"
+        FontAttributes="None"
+        Text="{Binding Name}" />
+    </Grid>
+  </Grid>
+</ViewCell>
