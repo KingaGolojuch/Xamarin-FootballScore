@@ -1,4 +1,5 @@
-﻿using PROJEKT.ViewModels;
+﻿using PROJEKT.Models.Interfaces;
+using PROJEKT.ViewModels;
 
 using Xamarin.Forms;
 
@@ -14,7 +15,8 @@ namespace PROJEKT.Views.Controls
             this.WidthRequest = (Application.Current as App).Width;
             _vm = new FixtureItemViewModel();
 
-            _vm.DownloadData(listView);
+            IDownloadFixture download = new DownloadFixture();
+            _vm.DownloadData(download, listView);
         }
     }
 }

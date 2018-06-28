@@ -7,9 +7,34 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using Xamarin.Forms;
+using PROJEKT.Models.Interfaces;
 
 namespace PROJEKT.ViewModels
 {
+    /// <summary>
+    /// Klasa implementujaca metode API potrzebna do pobrania Fixture
+    /// </summary>
+    public class DownloadFixture : IDownloadFixture
+    {
+        public FixturesDTO results { get; set; }
+
+        public async System.Threading.Tasks.Task HttpCall()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                HttpResponseMessage response = await client.GetAsync(new Uri(Configuration.API_COMPETITIONS + "/" + (Application.Current as App).CompetitionId) + "/fixtures");
+
+                string responseJson = await response.Content.ReadAsStringAsync();
+
+                results = JsonConvert.DeserializeObject<FixturesDTO>(responseJson);
+            }
+            catch (Exception ex)
+            { }
+
+        }
+
+    }
     /// <summary> 
     /// Klasa pomocnicza do obsłużenia widoku.
     /// </summary> 
@@ -30,17 +55,10 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
         /// </summary> 
-        public async void DownloadData(ListView listView)
+        public async void DownloadData(IDownloadFixture download, ListView listView)
         {
-            try
-            {
-                HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync(new Uri(Configuration.API_COMPETITIONS + "/" + (Application.Current as App).CompetitionId) + "/fixtures");
-                string responseJson = await response.Content.ReadAsStringAsync();
-                Results = JsonConvert.DeserializeObject<FixturesDTO>(responseJson);
-            }
-            catch (Exception ex)
-            { }
+            await download.HttpCall();
+            Results = download.results;
 
             List<CustomFixture> list = new List<CustomFixture>();
             if (Results != null)
