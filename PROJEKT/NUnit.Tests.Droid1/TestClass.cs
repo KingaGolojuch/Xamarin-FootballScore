@@ -55,5 +55,26 @@ namespace NUnit.Tests.Droid1
 
 
         }
+        [Test]
+        public void CompetionsViewIsUpdated()
+        {
+            CompetitionsViewModel competitonsView = new CompetitionsViewModel();
+
+            DownloadCompetitions downresults = new DownloadCompetitions();
+            ListView lst = new ListView();
+            Grid grd = new Grid();
+            Label lbl = new Label();
+            competitonsView.DownloadData(downresults, lst, grd, lbl);
+
+            List<CustomCompetition> cstlst = (List<CustomCompetition>)lst.ItemsSource;
+
+            Assert.AreEqual(cstlst[0].Id, downresults.results[0].Id);
+            Assert.AreEqual(cstlst[0].Caption, downresults.results[0].Caption);
+            Assert.AreEqual(cstlst[0].League, downresults.results[0].League);
+            Assert.AreEqual(cstlst[0].CurrentMatchday, downresults.results[0].CurrentMatchday.ToString());
+            Assert.AreEqual(cstlst[0].NumberOfMatchdays, downresults.results[0].NumberOfMatchdays.ToString());
+            Assert.AreEqual(cstlst[0].NumerOfTeams, downresults.results[0].NumberOfTeams.ToString());
+
+        }
     }
 }
