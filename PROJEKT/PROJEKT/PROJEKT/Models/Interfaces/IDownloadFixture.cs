@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PROJEKT.Models.Interfaces
 {
+    /// <summary>
+    /// Interfejs do pobrania danych dla Fixture
+    /// </summary>
     public interface IDownloadFixture
     {
         FixturesDTO results { get; set; }
