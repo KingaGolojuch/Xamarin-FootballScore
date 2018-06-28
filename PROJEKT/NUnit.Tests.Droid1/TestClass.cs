@@ -1,4 +1,8 @@
 ﻿using NUnit.Framework;
+using NUnit.Tests.Droid1.MockResults;
+using PROJEKT.Models;
+using PROJEKT.ViewModels;
+using PROJEKT.Views.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +15,21 @@ namespace NUnit.Tests.Droid1
     public class TestClass
     {
         [Test]
-        public void TestMethod()
+        public void TeamsViewIsUpdated()
         {
-            // TODO: Add your test code here
-            Assert.Pass("Your first passing test");
+            //FixturesView ftView = new FixturesView();
+            TeamItemViewModel teamsView = new TeamItemViewModel();
+
+            MyListView lst = new MyListView();
+            //lst = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::PROJEKT.Views.Controls.MyListView>(ftView, "listView");
+
+            DownloadTeams downresults = new DownloadTeams();
+            teamsView.DownloadData(downresults, lst);
+
+
+            List<CustomTeam> cstlst = (List<CustomTeam>)lst.ItemsSource;
+
+            Assert.AreEqual(cstlst[0].Name, downresults.results.Teams[0].Name);
         }
     }
 }
