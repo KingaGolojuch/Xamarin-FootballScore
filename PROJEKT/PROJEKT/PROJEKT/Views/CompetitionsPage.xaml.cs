@@ -1,4 +1,5 @@
 ﻿using PROJEKT.Models;
+using PROJEKT.Models.Interfaces;
 using PROJEKT.ViewModels;
 using PROJEKT.Views.Controls;
 using System.Threading.Tasks;
@@ -23,7 +24,8 @@ namespace PROJEKT.Views
         protected override void OnAppearing()
         {
             listView.ItemTemplate = new DataTemplate(typeof(CompetitionsView));
-            _vm.DownloadData(listView, grid, LblNoInternet);
+            IDownloadCompetition download = new DownloadCompetition();
+            _vm.DownloadData(download, listView, grid, LblNoInternet);
 
             listView.ItemSelected += async (s, e) =>
             {
