@@ -11,12 +11,24 @@ using Xamarin.Forms;
 
 namespace PROJEKT.ViewModels
 {
+    /// <summary> 
+    /// Klasa pomocnicza do obsłużenia widoku CompetitionsPage. 
+    /// </summary> 
     [AddINotifyPropertyChangedInterface]
     public class CompetitionsViewModel
     {
+        /// <summary> 
+        /// Lista CustomCompetition, która jest źródłem do kontrolki ListView. 
+        /// </summary> 
         public List<CustomCompetition> Competitions { get; set; }
+        /// <summary> 
+        /// Lista obiektów CompetitionDTO do przekonwertowania danych z JSON. 
+        /// </summary> 
         public List<CompetitionDTO> Results { get; set; }
 
+        /// <summary> 
+        /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
+        /// </summary> 
         public async void DownloadData(ListView listView, Grid grid, Label lblNoInternet)
         {
             try

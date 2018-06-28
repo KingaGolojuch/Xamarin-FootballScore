@@ -10,14 +10,26 @@ using Xamarin.Forms;
 
 namespace PROJEKT.ViewModels
 {
+    /// <summary> 
+    /// Klasa pomocnicza do obsłużenia widoku.
+    /// </summary> 
     [AddINotifyPropertyChangedInterface]
     public class LeagueItemViewModel
     {
+        /// <summary> 
+        /// Lista obiektów LeaguesDTO do przekonwertowania danych z JSON. 
+        /// </summary>
         public LeaguesDTO Results { get; set; }
 
+        /// <summary> 
+        /// Konstruktor. 
+        /// </summary> 
         public LeagueItemViewModel()
         { }
 
+        /// <summary> 
+        /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
+        /// </summary>
         public async void DownloadData(StackLayout stlItem)
         {
             try

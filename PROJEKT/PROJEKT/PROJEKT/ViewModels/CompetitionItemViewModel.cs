@@ -8,14 +8,26 @@ using Xamarin.Forms;
 
 namespace PROJEKT.ViewModels
 {
+    /// <summary> 
+    /// Klasa pomocnicza do załadowania danych do widoku.
+    /// </summary> 
     [AddINotifyPropertyChangedInterface]
     public class CompetitionItemViewModel
     {
+        /// <summary> 
+        /// Lista obiektów CompetitionDTO do przekonwertowania danych z JSON. 
+        /// </summary> 
         public CompetitionDTO Result { get; set; }
 
+        /// <summary> 
+        /// Konstruktor.
+        /// </summary> 
         public CompetitionItemViewModel()
         { }
 
+        /// <summary> 
+        /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
+        /// </summary> 
         public async void DownloadData(Label caption, Label year, Label currentMatchday, Label numberOfMatchdays, Label numberOfTeams)
         {
             try

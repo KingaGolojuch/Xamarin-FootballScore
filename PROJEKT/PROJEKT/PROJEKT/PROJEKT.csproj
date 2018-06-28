@@ -47,7 +47,6 @@
     <Compile Include="Models\API\FixturesDTO.cs" />
     <Compile Include="Models\API\CompetitionDTO.cs" />
     <Compile Include="Models\Configuration.cs" />
-    <Compile Include="Models\Converters\BoolNegatedConverter.cs" />
     <Compile Include="Models\CustomTeam.cs" />
     <Compile Include="Models\CustomFixture.cs" />
     <Compile Include="Models\CustomCompetition.cs" />

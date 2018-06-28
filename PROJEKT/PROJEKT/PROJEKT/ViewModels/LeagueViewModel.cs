@@ -2,6 +2,9 @@
 
 namespace PROJEKT.ViewModels
 {
+    /// <summary> 
+    /// Klasa pomocnicza do przechowywania danych dla widoku.
+    /// </summary>
     [AddINotifyPropertyChangedInterface]
     public class LeagueViewModel
     {

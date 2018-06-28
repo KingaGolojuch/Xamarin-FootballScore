@@ -10,14 +10,26 @@ using Xamarin.Forms;
 
 namespace PROJEKT.ViewModels
 {
+    /// <summary> 
+    /// Klasa pomocnicza do obsłużenia widoku.
+    /// </summary> 
     [AddINotifyPropertyChangedInterface]
     public class FixtureItemViewModel
     {
+        /// <summary> 
+        /// Lista obiektów FixturesDTO do przekonwertowania danych z JSON. 
+        /// </summary> 
         public FixturesDTO Results { get; set; }
 
+        /// <summary> 
+        /// Konstruktor. 
+        /// </summary> 
         public FixtureItemViewModel()
         { }
 
+        /// <summary> 
+        /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
+        /// </summary> 
         public async void DownloadData(ListView listView)
         {
             try

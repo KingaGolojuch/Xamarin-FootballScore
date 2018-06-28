@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PROJEKT.Models
 {
+    /// <summary> 
+    /// Klasa pomocnicza do przechowywania danych dla widoku.
+    /// </summary> 
     public class CustomCompetition
     {
         public int Id { get; set; }
