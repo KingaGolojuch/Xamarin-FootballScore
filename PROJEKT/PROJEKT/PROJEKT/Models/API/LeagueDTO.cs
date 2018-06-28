@@ -2,6 +2,10 @@
 
 namespace PROJEKT.Models.API
 {
+    /// <summary> 
+    /// Klasa pomocnicza do wczytywania danych z API za pomocą JSON. 
+    /// Dane pojedynczego wiersza w tabeli ligi. 
+    /// </summary> 
     public class LeagueDTO
     {
         [JsonProperty("position")]

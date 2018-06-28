@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace PROJEKT.Models.API
 {
+    /// <summary> 
+    /// Klasa pomocnicza do wczytywania danych z API za pomocą JSON. 
+    /// Dane pojedynczego meczu. 
+    /// </summary> 
     public class FixtureDTO
     {
         [JsonProperty("status")]

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace PROJEKT.Models.API
 {
+    /// <summary> 
+    /// Klasa pomocnicza do wczytywania danych z API za pomocą JSON. 
+    /// Dane pojedynczego konkursu. 
+    /// </summary> 
     public class CompetitionDTO
     {
         [JsonProperty("id")]
