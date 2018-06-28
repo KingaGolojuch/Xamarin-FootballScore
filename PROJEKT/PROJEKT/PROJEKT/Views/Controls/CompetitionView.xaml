@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:e="clr-namespace:PROJEKT.Models.Extensions;assembly=PROJEKT"
+  x:Class="PROJEKT.Views.Controls.CompetitionView">
+
+
+  <Frame
+    CornerRadius="10"
+    Margin="10"
+    Padding="0">
+    <Grid
+      VerticalOptions="Center"
+      RowSpacing="0"
+      ColumnSpacing="0"
+      Margin="10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="1*" />
+      </Grid.ColumnDefinitions>
+
+      <Label
+        x:Name="caption"
+        Grid.Row="0"
+        Grid.ColumnSpan="2"
+        FontSize="30"
+        FontAttributes="Bold"
+        HorizontalTextAlignment="Center"
+        TextColor="#073a0a" />
+      <Label
+        x:Name="year"
+        Grid.Row="1"
+        Grid.ColumnSpan="2"
+        FontSize="24"
+        HorizontalTextAlignment="Center"
+        FontAttributes="Italic"
+        TextColor="#073a0a" />
+
+      <Label
+        Grid.Row="3"
+        Grid.Column="0"
+        Text="MECZE"
+        FontSize="24"
+        FontAttributes="Bold"
+        HorizontalTextAlignment="Center"
+        TextColor="#073a0a" />
+      <StackLayout
+        Grid.Row="4"
+        Grid.Column="0"
+        HorizontalOptions="Center"
+        Orientation="Horizontal">
+        <Label
+          x:Name="currentMatchday"
+          FontSize="24"
+          FontAttributes="Italic"
+          TextColor="#073a0a" />
+        <Label
+          Text=" / "
+          FontSize="24"
+          FontAttributes="Italic"
+          TextColor="#073a0a" />
+        <Label
+          x:Name="numberOfMatchdays"
+          FontSize="24"
+          FontAttributes="Italic"
+          TextColor="#073a0a" />
+      </StackLayout>
+
+      <Label
+        Grid.Row="3"
+        Grid.Column="1"
+        Text="DRUŻYNY"
+        FontSize="24"
+        FontAttributes="Bold"
+        HorizontalTextAlignment="Center"
+        TextColor="#073a0a" />
+      <Label
+        x:Name="numberOfTeams"
+        Grid.Row="4"
+        Grid.Column="1"
+        FontSize="24"
+        FontAttributes="Italic"
+        HorizontalTextAlignment="Center"
+        TextColor="#073a0a" />
+    </Grid>
+  </Frame>
+
+</ContentView>
