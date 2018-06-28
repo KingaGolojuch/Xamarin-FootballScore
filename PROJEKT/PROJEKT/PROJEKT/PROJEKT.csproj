@@ -62,8 +62,29 @@
     <Compile Include="Views\Controls\CompetitionsView.xaml.cs">
       <DependentUpon>CompetitionsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Controls\CompetitionView.xaml.cs">
+      <DependentUpon>CompetitionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\FixturesItemView.xaml.cs">
+      <DependentUpon>FixturesItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\FixturesView.xaml.cs">
+      <DependentUpon>FixturesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\LeagueItemView.xaml.cs">
+      <DependentUpon>LeagueItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\LeagueView.xaml.cs">
+      <DependentUpon>LeagueView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Controls\MyCarouselView.cs" />
     <Compile Include="Views\Controls\MyListView.cs" />
+    <Compile Include="Views\Controls\TeamsItemView.xaml.cs">
+      <DependentUpon>TeamsItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\TeamsView.xaml.cs">
+      <DependentUpon>TeamsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\InitializationPage.xaml.cs">
       <DependentUpon>InitializationPage.xaml</DependentUpon>
     </Compile>
@@ -111,6 +132,34 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Controls\CompetitionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\CompetitionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\FixturesItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\FixturesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\LeagueItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\LeagueView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\TeamsItemView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\TeamsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
