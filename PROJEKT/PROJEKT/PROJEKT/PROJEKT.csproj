@@ -52,7 +52,11 @@
     <Compile Include="ViewModels\CompetitionItemViewModel.cs" />
     <Compile Include="ViewModels\CompetitionsViewModel.cs" />
     <Compile Include="ViewModels\CompetitionViewModel.cs" />
+    <Compile Include="ViewModels\FixtureItemViewModel.cs" />
     <Compile Include="ViewModels\InitializationViewModel.cs" />
+    <Compile Include="ViewModels\LeagueItemViewModel.cs" />
+    <Compile Include="ViewModels\LeagueViewModel.cs" />
+    <Compile Include="ViewModels\TeamItemViewModel.cs" />
     <Compile Include="Views\CompetitionPage.xaml.cs">
       <DependentUpon>CompetitionPage.xaml</DependentUpon>
     </Compile>
