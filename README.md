@@ -1,1 +1,1 @@
-Xamarin-FootballScore 
+Xamarin-FootballScore
