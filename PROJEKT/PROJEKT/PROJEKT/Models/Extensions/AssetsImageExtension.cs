@@ -6,20 +6,11 @@ using Xamarin.Forms.Xaml;
 
 namespace PROJEKT.Models.Extensions
 {
-    /// <summary>
-    /// Klasa pomocnicza do wczytywania obrazka.
-    /// </summary>
     [ContentProperty("Source")]
     public class AssetsImageExtension : IMarkupExtension
     {
-        /// <summary>
-        /// Źródło obrazka.
-        /// </summary>
         public string Source { get; set; }
 
-        /// <summary>
-        /// Metoda do odczytania ścieżki obrazka.
-        /// </summary>
         public object ProvideValue(IServiceProvider serviceProvider)
         {
             try
@@ -33,9 +24,6 @@ namespace PROJEKT.Models.Extensions
             }
         }
 
-        /// <summary>
-        /// Metoda do odczytania ścieżki obrazka.
-        /// </summary>
         public static ImageSource GetSource(string source)
         {
             if (!string.IsNullOrEmpty(source))

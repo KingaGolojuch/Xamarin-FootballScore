@@ -11,24 +11,12 @@ using Xamarin.Forms;
 
 namespace PROJEKT.ViewModels
 {
-    /// <summary>
-    /// Klasa pomocnicza do obsłużenia widoku CompetitionsPage.
-    /// </summary>
     [AddINotifyPropertyChangedInterface]
     public class CompetitionsViewModel
     {
-        /// <summary>
-        /// Lista CustomCompetition, która jest źródłem do kontrolki ListView.
-        /// </summary>
         public List<CustomCompetition> Competitions { get; set; }
-        /// <summary>
-        /// Lista obiektów CompetitionDTO do przekonwertowania danych z JSON.
-        /// </summary>
         public List<CompetitionDTO> Results { get; set; }
 
-        /// <summary>
-        /// Metoda do pobrania z API danych.
-        /// </summary>
         public async void DownloadData(ListView listView, Grid grid, Label lblNoInternet)
         {
             try
@@ -45,35 +33,25 @@ namespace PROJEKT.ViewModels
 
             if (Results != null)
             {
-                DataView(listView, grid);
+                foreach (var result in Results)
+                {
+                    CustomCompetition custom = new CustomCompetition()
+                    {
+                        Id = result.Id,
+                        Caption = result.Caption,
+                        League = result.League,
+                        Year = result.Year,
+                        CurrentMatchday = result.CurrentMatchday.ToString(),
+                        NumberOfMatchdays = result.NumberOfMatchdays.ToString(),
+                        NumerOfTeams = result.NumberOfTeams.ToString()
+                    };
+                    Competitions.Add(custom);
+                }
             }
             else
             {
                 lblNoInternet.IsVisible = true;
             }
-            
-        }
-
-        /// <summary>
-        /// Metoda wczytująca dane do widoku.
-        /// </summary>
-        private void DataView(ListView listView, Grid grid)
-        {
-            foreach (var result in Results)
-            {
-                CustomCompetition custom = new CustomCompetition()
-                {
-                    Id = result.Id,
-                    Caption = result.Caption,
-                    League = result.League,
-                    Year = result.Year,
-                    CurrentMatchday = result.CurrentMatchday.ToString(),
-                    NumberOfMatchdays = result.NumberOfMatchdays.ToString(),
-                    NumerOfTeams = result.NumberOfTeams.ToString()
-                };
-                Competitions.Add(custom);
-            }
-
             listView.ItemsSource = Competitions;
             grid.IsVisible = false;
         }
