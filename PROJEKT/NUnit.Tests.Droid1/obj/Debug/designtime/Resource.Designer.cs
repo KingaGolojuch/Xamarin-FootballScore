@@ -26,6 +26,12 @@ namespace NUnit.Tests.Droid1
 		
 		public static void UpdateIdValues()
 		{
+			global::Nunit.Runner.Resource.String.ApplicationName = global::NUnit.Tests.Droid1.Resource.String.ApplicationName;
+			global::Nunit.Runner.Resource.String.Hello = global::NUnit.Tests.Droid1.Resource.String.Hello;
+			global::PCLStorage.Resource.String.ApplicationName = global::NUnit.Tests.Droid1.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::NUnit.Tests.Droid1.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::NUnit.Tests.Droid1.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::NUnit.Tests.Droid1.Resource.String.Hello;
 		}
 		
 		public partial class Drawable
@@ -40,6 +46,25 @@ namespace NUnit.Tests.Droid1
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7F020002
+			public const int ApplicationName = 2130837506;
+			
+			// aapt resource value: 0x7F020003
+			public const int Hello = 2130837507;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
 			{
 			}
 		}

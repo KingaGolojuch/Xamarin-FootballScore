@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PROJEKT.Models.Interfaces
 {
+    /// <summary>
+    /// Interfejs do pobrania Competition
+    /// </summary>
     public interface IDownloadCompetition
     {
         System.Threading.Tasks.Task HttpCall();
