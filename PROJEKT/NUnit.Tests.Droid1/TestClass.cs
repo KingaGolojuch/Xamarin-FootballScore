@@ -31,5 +31,29 @@ namespace NUnit.Tests.Droid1
 
             Assert.AreEqual(cstlst[0].Name, downresults.results.Teams[0].Name);
         }
+        [Test]
+        public void FixturesViewIsUpdated()
+        {
+            //FixturesView ftView = new FixturesView();
+            FixtureItemViewModel fixturesView = new FixtureItemViewModel();
+
+            MyListView lst = new MyListView();
+            //lst = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::PROJEKT.Views.Controls.MyListView>(ftView, "listView");
+
+            DownloadFixtures downresults = new DownloadFixtures();
+            fixturesView.DownloadData(downresults, lst);
+
+
+            List<CustomFixture> cstlst = (List<CustomFixture>)lst.ItemsSource;
+
+            Assert.AreEqual(cstlst[0].HomeTeam, downresults.results.Fixtures[0].HomeTeamName);
+            Assert.AreEqual(cstlst[0].AwayTeam, downresults.results.Fixtures[0].AwayTeamName);
+            Assert.AreEqual(cstlst[0].HomeTeamGoals, downresults.results.Fixtures[0].Result.GoalsHomeTeam.ToString());
+            Assert.AreEqual(cstlst[0].AwayTeamGoals, downresults.results.Fixtures[0].Result.GoalsAwayTeam.ToString());
+            //Assert.AreEqual(cstlst[0].Date, downresults.Results.Fixtures[0].Date);
+
+
+
+        }
     }
 }
