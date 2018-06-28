@@ -1,5 +1,6 @@
 ﻿using PROJEKT.Models;
 using PROJEKT.Models.Extensions;
+using PROJEKT.Models.Interfaces;
 using PROJEKT.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace PROJEKT.Views.Controls
             this.WidthRequest = (Application.Current as App).Width;
             _vm = new TeamItemViewModel();
 
-            _vm.DownloadData(listView);
+            IDownloadTeam download = new DownloadTeam();
+            _vm.DownloadData(download, listView);
         }
     }
 }
