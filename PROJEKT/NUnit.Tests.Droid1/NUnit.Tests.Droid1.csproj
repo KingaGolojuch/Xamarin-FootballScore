@@ -87,6 +87,8 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="MockResults\DownloadCompetition.cs" />
+    <Compile Include="MockResults\DownloadFixtures.cs" />
+    <Compile Include="MockResults\DownloadTeams.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestClass.cs" />
