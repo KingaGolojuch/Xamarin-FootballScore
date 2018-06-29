@@ -51,6 +51,9 @@
     <Compile Include="Models\CustomFixture.cs" />
     <Compile Include="Models\CustomCompetition.cs" />
     <Compile Include="Models\Extensions\AssetsImageExtension.cs" />
+    <Compile Include="Models\Interfaces\IDownloadCompetition.cs" />
+    <Compile Include="Models\Interfaces\IDownloadFixture.cs" />
+    <Compile Include="Models\Interfaces\IDownloadTeam.cs" />
     <Compile Include="Models\Interfaces\IStreamService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\TeamItemViewModel.cs" />
