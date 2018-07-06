@@ -70,6 +70,7 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda zmieniająca tło menu dolnego.
         /// </summary> 
+        /// <param name="grid">Grid</param>
         public void ChangeBackground(Grid grid)
         {
             GTeams.BackgroundColor = Color.FromHex("#073a0a");

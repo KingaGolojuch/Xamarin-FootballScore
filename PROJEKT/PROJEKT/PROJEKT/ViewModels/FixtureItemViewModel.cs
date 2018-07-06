@@ -55,6 +55,8 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
         /// </summary> 
+        /// <param name="download">Obiekt implementujący IDownloadFixture, musi posiadać właściwość FixturesDTO</param>
+        /// <param name="listView">Widok listy</param>
         public async void DownloadData(IDownloadFixture download, ListView listView)
         {
             await download.HttpCall();

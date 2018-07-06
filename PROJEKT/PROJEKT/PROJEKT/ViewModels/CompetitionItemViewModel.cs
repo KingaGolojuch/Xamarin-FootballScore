@@ -28,6 +28,11 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
         /// </summary> 
+        /// <param name="caption">Labelka nagłówka</param>
+        /// <param name="currentMatchday">Labelka informujaca o obecnej turze ligi</param>
+        /// <param name="numberOfMatchdays">Labelka informujaca o ilosci rozgrywanych meczy</param>
+        /// <param name="numberOfTeams">Labelka informujaca o ilosci druzyn</param>
+        /// <param name="year">Labelka informujaca o roku danych rozgrywek</param>
         public async void DownloadData(Label caption, Label year, Label currentMatchday, Label numberOfMatchdays, Label numberOfTeams)
         {
             try

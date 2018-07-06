@@ -51,6 +51,10 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
         /// </summary> 
+        /// <param name="download">Obiekt implementujący IDownloadCompetition, musi posiadać właściwość liste CompetitionsDTO</param>
+        /// <param name="listView">Widok listy</param>
+        /// <param name="grid">Grid aplikacji</param>
+        /// <param name="lblNoInternet">Labelka do informacji o braku połączenia</param>
         public async void DownloadData(IDownloadCompetition download,ListView listView, Grid grid, Label lblNoInternet)
         {
             await download.HttpCall();

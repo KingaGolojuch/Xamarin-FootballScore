@@ -50,6 +50,8 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.
         /// </summary>
+        /// <param name="download">Obiekt implementujący IDownloadTeam, musi posiadać właściwość TeamsDTO</param>
+        /// <param name="listView">Widok listy</param>
         public async void DownloadData(IDownloadTeam download, ListView listView)
         {
             await download.HttpCall();

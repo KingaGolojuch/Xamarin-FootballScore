@@ -12,6 +12,8 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do zapisywania rozdzielczości telefonu.
         /// </summary> 
+        /// <param name="height">Wysokosc ekranu</param>
+        /// <param name="width">Szerokosc ekranu</param>
         public void SizeChanged(double width, double height)
         {
             (Application.Current as App).Width = width;
