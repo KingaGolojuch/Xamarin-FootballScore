@@ -30,7 +30,7 @@ namespace PROJEKT.ViewModels
         /// <summary> 
         /// Metoda do pobrania z API danych oraz wczytywanie ich do widoku.        
         /// </summary>
-        /// <param name="stlItem">Stack Layout item</param>
+        /// <param name="stlItem">Referencja StackLayout dla widoku</param>
         public async void DownloadData(StackLayout stlItem)
         {
             try
